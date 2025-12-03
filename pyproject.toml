@@ -14,7 +14,6 @@ dependencies = [
     ,"seaborn"
     ,"requests"
     ,"yaml"
-    ,"io"
     ,"pathlib"
     ,"sklearn"
     # List any other packages your code needs here
