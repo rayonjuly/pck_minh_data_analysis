@@ -15,7 +15,7 @@ dependencies = [
     ,"requests"
     ,"yaml"
     ,"pathlib"
-    ,"sklearn"
+    ,"scikit-learn"
     # List any other packages your code needs here
 ]
 
