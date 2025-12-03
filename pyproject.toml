@@ -13,7 +13,7 @@ dependencies = [
     ,"matplotlib"
     ,"seaborn"
     ,"requests"
-    ,"yaml"
+    ,"PyYAML"
     ,"pathlib"
     ,"scikit-learn"
     # List any other packages your code needs here
