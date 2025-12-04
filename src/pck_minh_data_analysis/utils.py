@@ -1,4 +1,6 @@
 import pandas as pd
+import re
+from unidecode import unidecode
 
 def show_null_values(df):
     df_no_null_values = df.isna().sum().rename('Num of null rows')
@@ -10,3 +12,14 @@ def show_null_values(df):
     )
 
     return result
+
+def normalize_column_name(df):
+    result = []
+    for col in df.columns:
+        col = re.sub('(\n|\t)', '', col) # replace \n and \t with ''
+        col = col.lower() # lower
+        col = re.sub(' ', '_', col) # repace ' ' with '_'
+        col = unidecode(col) # remove accent
+        result.append(col)
+    df.columns = result
+    return df
