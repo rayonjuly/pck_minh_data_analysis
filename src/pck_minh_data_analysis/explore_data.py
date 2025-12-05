@@ -37,6 +37,5 @@ def normalize_column_name(df):
     return df
 
 def show_distribution_of_attributes(df, bins=40, figsize=(12,8)):
-    %matplotlib inline
     df.hist(bins=bins, figsize=figsize)
     plt.show()
