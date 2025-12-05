@@ -1,6 +1,18 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+import requests
 import re
 from unidecode import unidecode
+import yaml
+import io
+from pathlib import Path
+import time
+import math
+from math import sqrt
+import json
 
 def show_null_values(df):
     df_no_null_values = df.isna().sum().rename('Num of null rows')
@@ -23,3 +35,8 @@ def normalize_column_name(df):
         result.append(col)
     df.columns = result
     return df
+
+def show_distribution_of_attributes(df, bins=40, figsize=(12,8)):
+    %matplotlib inline
+    df.hist(bins=bins, figsize=figsize)
+    plt.show()
